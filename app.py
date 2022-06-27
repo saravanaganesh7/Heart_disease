@@ -12,7 +12,7 @@ model = pickle.load(open('gs_log_reg.pkl', 'rb'))
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/',methods=['GET'])
 def home():
     return render_template('main.html')
 
